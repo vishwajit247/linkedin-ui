@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        *{margin: 0px; padding: 0px; outline: 0px;}
+        body{
+            color: gray;
+        }
+        .navb{
+            width: 100%;
+            height: 8vh;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .search-box{
+            margin-left: 15px;
+            width: 180px;
+            border-radius: 20px;
+            height: 28px;
+            position: relative;
+        }
+        .search-box input{
+            width: 100%;
+            height: 100%;
+            background-color: rgb(230, 230, 230);
+            border: none;
+            box-sizing: border-box;
+            font-size: 14px;
+            padding-left: 28px;
+            border-radius: 20px;
+        }
+        .search-box .search{
+            position: absolute;
+            width: 14px;
+            height: 14px;
+            top: 6px;
+            left: 10px;
+        }
+        .search img{
+            width: 100%;
+            height: 100%;
+        }
+        .center a{
+            text-decoration: none;
+            font-size: 15px;
+        }
+        .center img{
+            width: 30px;
+            height: 30px;
+        }
+        .navb .right{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            padding-right: 100px;
+        }
+        .navb .right img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .navb .left{
+            width: 20%;
+            display: flex;
+            padding-left: 100px;
+        }
+        .navb .center{
+            width: 40%;
+            display: flex;
+            justify-content: space-evenly;
+            text-align: center;
+        }
+        .navb .right-con{
+            width: 10%;
+            display: flex;
+            justify-content: end;
+            position: relative;
+        }
+        .navrightcon1{
+            position: absolute;
+            top: -4px;
+            left: 43px;
+        }
+
+        .navb .center span{
+            position: relative;
+            bottom: 8px;
+            color: gray;
+        }
+        .navb .logo{
+            position: relative;
+            top: 5px;
+        }
+
+        .main{
+            width: 100%;
+            height: 135vh;
+            background-color: rgb(230, 230, 230);
+            display: flex;
+            justify-content: space-between;
+            padding-top: 3vh;
+            gap: 20px;
+        }
+        .main .left{
+            width: 20%;
+            height: 100%;
+            margin-left: 100px;
+            display: flex;
+            flex-direction: column;
+        }
+        .main .center{
+            width: 45%;
+            height: 107px;
+            background-color: rgb(255, 255, 255);
+        }
+        .main .right{
+            width: 20%;
+            /* height: 50%; */
+            margin-right: 100px;
+        }
+        .lcon1 .cover{
+            width: 100%;
+            height: 100px;
+        }
+        .cover img{
+            width: 100%;
+            height: 100%;
+        }
+        .lcon1 .pic{
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            position: relative;
+            bottom: 32px;
+            left: 20px;
+        }
+        .lcon1 .pic img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .ldetails1{
+            padding: 15px 20px;
+            font-size: 12px;
+        }
+        .ldetails{
+            text-align: right;
+        }
+        .ldetails .fl-ldetails{
+            float: left;
+        }
+        .ldetails-no{
+            color: #005fff;
+            padding-bottom: 4px;
+        }
+        .left .premium{
+            width: 100%;
+            height: 80px;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .left .premium img{
+            position: relative;
+            top: 3px;
+            left: 8px;
+        }
+        .left .lcon1{
+            width: 100%;
+            height: 350px;
+            background-color: rgb(255, 255, 255);
+        }
+        .left .lcon2{
+            margin-top: 15px;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            font-size: 14px;
+        }
+        .left .lcon2 img{
+            width: 18px;
+            height: 18px;
+            position: relative;
+            top: 4px;
+            padding-right: 10px;
+        }
+        .lcon2 h3{
+            font-size: 18px;
+            padding-top: 20px;
+            padding-bottom: 4px;
+        }
+        .cen-top{
+            display: flex;
+            align-items: center;
+            padding: 20px;
+        }
+        .cen1-img1{
+            padding-right: 10px;
+        }
+        .cen1-img1 img{
+            border-radius: 50%;
+        }
+        .cen2-bot{
+            height: 40px;
+            display: flex;
+            align-items: center;
+        }
+        .cen2-bot div{
+            width: 25%;
+            text-align: center;
+        }
+        .cen2-bot div img{
+            width: 15px;
+            height: 15px;
+            position: relative;
+            top: 2px;
+        }
+        .right .top-text div{
+            line-height: 11px;
+            padding-top: 8px;
+            padding-left: 20px;
+        }
+        .right .top-text div p{
+            font-size: 10px;
+        }
+        .right .top-text div h6{
+            font-size: 12px;
+        }
+        .right .right-top{
+            width: 100%;
+            background-color: white;
+        }
+        .right .right-bot{
+            margin-top: 15px;
+            background-color: white;
+            height: 190px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            font-size: 13px;
+        }
+        .right-img div{
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+        }
+        .right-img img{
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+        }
+        .right-bot .right-img{
+            display: flex;
+            justify-content: center;
+            gap: 5px;
+        }
+        .right-bottom1{
+            font-size: 13px;
+            border-radius: 25px;
+            padding: 5px 8px;
+            margin-left: 5px;
+            color: #005fff;
+            border: 1px solid #005fff;
+            background-color: transparent;
+        }
+        .right-foot{
+            margin-top: 20px;
+            font-size: 15px;
+        }
+        .right-foot div{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+        .right-foot div a{
+            text-decoration: none;
+            color: gray;
+        }
+        .h4info img{
+            width: 14px;
+            position: absolute;
+            top: 98px;
+            right: 120px;
+        }
+        .hrcenter img{
+            width: 10px;
+            height: 7px;
+        }
+        .hrcenter{
+            margin-top: 5px;
+            display: flex;
+            position: relative;
+        }
+        .hrright{
+            position: relative;
+            top: 7px;
+        }
+    </style>
+
+</head>
+<body>
+    <nav class="navb">
+        <div class="left">
+            <div class="logo"><i class="fa-brands fa-linkedin fa-2xl" style="color: #005fff;"></i></div>
+            <div class="search-box">
+                <input type="text" placeholder="search">
+                <div class="search"><img src="search.png" alt=""></div>
+            </div>
+        </div>
+        <div class="center">
+            <a href=""><img src="home.png" alt=""><span>Home</span></a>
+            <a href=""><img src="network.png" alt=""><span>My Network</span></a>
+            <a href=""><img src="jobs.png" alt=""><span>Jobs</span></a>
+            <a href=""><img src="message.png" alt=""><span>Messaging</span></a>
+            <a href=""><img src="notification.png" alt=""><span>Notifications</span></a>
+        </div>
+        <div class="right-con">
+            <div class="right">
+                <img src="ppic.jpg" alt="">
+                <div class="navrightcon1"><i class="fa-solid fa-circle fa-2xs" style="color: rgb(45, 255, 45);"></i></div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="main">
+        <div class="left">
+            <div class="lcon1">
+                <div class="cover"><img src="cover-pic.png" alt=""></div>
+                <div class="pic"><img src="ppic.jpg" alt=""></div>
+                <div style="padding-left: 20px;">
+                    <h2 style="margin-top: -25px; color: black;">Vishwajit Khanna</h4>
+                    <p style="color: orange;">Full Stack Developer</p>
+                </div>
+                <div class="ldetails ldetails1">
+                    <p class="fl-ldetails">Your profile views</p>
+                    <p class="ldetails ldetails-no">1123</p>
+                    <p class="fl-ldetails">Your post views</p>
+                    <p class="ldetails ldetails-no">923</p>
+                    <p class="fl-ldetails">Your connections</p>
+                    <p class="ldetails ldetails-no">2534</p>
+                </div>
+                <hr>
+                <div class="premium">
+                    <div><img src="items.png" alt="" width="20px"></div>
+                    <div>My items</div>
+                    <div style="border: 1px solid rgba(0, 0, 0, 0.228); height: 85%;"></div>
+                    <div><img src="premium.png" alt="" width="20px"></div>
+                    <div>Try premium</div>
+                </div>
+            </div>
+            <div class="lcon2">
+                <div style="padding-left: 20px;">
+                    <h3>Recent</h3>
+                    <div><img src="recent.png" alt="">Web Development</div>
+                    <div><img src="recent.png" alt="">User Interface</div>
+                    <div><img src="recent.png" alt="">Online Learning</div>
+                    <div><img src="recent.png" alt="">Learn Online</div>
+                    <div><img src="recent.png" alt="">Code Better</div>
+                    <div><img src="recent.png" alt="">Group Learning</div>
+                    <h3>GROUPS</h3>
+                    <div><img src="group.png" alt="">Web Development</div>
+                    <div><img src="group.png" alt="">HTML & CSS</div>
+                    <div><img src="group.png" alt="">React</div>
+                    <div><img src="group.png" alt="">Node</div>
+                    <div><img src="group.png" alt="">Python</div>
+                    <div><img src="group.png" alt="">Java</div>
+                    <h3>HASHTAG</h3>
+                    <div><img src="hashtag.png" alt="">Web Development</div>
+                    <div><img src="hashtag.png" alt="">User Interface</div>
+                    <div><img src="hashtag.png" alt="">Online Learning</div>
+                </div>
+                <hr style="margin-top: 25px; border: 1px solid rgba(0, 0, 0, 0.267);">
+                <p style="font-size: 15px; color: #005fff; padding: 15px 0px; text-align: center;">Discover more</p>
+            </div>
+        </div>
+        <div class="center">
+            <div class="cen-top">
+                <div class="cen1-img1"><img src="ppic.jpg" alt=""></div>
+                    <div class="cen1"><p>Write a post</p></div>
+            </div>
+            <hr style="margin-top: -10px;">
+            <div class="cen2-bot">
+                <div><img src="photo.png" alt=""> Photo</div>
+                <p style="border: 1px solid rgba(0, 0, 0, 0.228); height: 100%;"></p>
+                <div><img src="video.png" alt=""> Video</div>
+                <p style="border: 1px solid rgba(0, 0, 0, 0.228); height: 100%;"></p>
+                <div><img src="event.png" alt=""> Event</div>
+                <div style="color: white; background-color: #005fff; padding: 12px 2px; box-sizing: border-box;"> Post</div>
+            </div>
+            <div class="hrcenter">
+                <div style="border: none; border-bottom: 1px solid black; width: 87%;"></div>
+                <div class="hrright">sort by <strong>top</strong><img src="down-arrow.png" alt=""></div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="right-top">
+                <h4 style="color: black; padding: 20px 15px; position: relative;">Trending News</h4>
+                <div class="h4info"><img src="more.png" alt=""></div>
+                <div class="top-text">
+                    <div>
+                        <h6>High demand for skilled manpower</h6>
+                        <p>1d ago &nbsp;&nbsp;&nbsp; 10,934 readers</p>
+                    </div>
+                    <div>
+                        <h6>High demand for programmers</h6>
+                        <p>4d ago &nbsp;&nbsp;&nbsp; 10,934 readers</p>
+                    </div>
+                    <div>
+                        <h6>High demand for JS</h6>
+                        <p>6d ago &nbsp;&nbsp;&nbsp; 10,934 readers</p>
+                    </div>
+                    <div>
+                        <h6>High demand for MERN</h6>
+                        <p>9d ago &nbsp;&nbsp;&nbsp; 10,934 readers</p>
+                    </div>
+                    <div>
+                        <h6>Python is most demand skill</h6>
+                        <p>15d ago &nbsp;&nbsp;&nbsp; 15,934 readers</p>
+                    </div>
+                    <p style="padding: 20px; font-size: 12px; color: #005fff;">Read more</p>
+                </div>
+            </div>
+            <div class="right-bot">
+                <div>Ad...</div>
+                <div>
+                    <p style="padding-bottom: 10px;">Master the 5 principles of web design</p>
+                    <div class="right-img">
+                        <div class="r1img"><img src="ppic.jpg" alt=""></div>
+                        <div class="r2img"><img src="mi-logo.png" alt=""></div>
+                    </div>
+                </div>
+                <div><strong>Brand and Demand in xiaomi</strong><button class="right-bottom1">Learn more</button></div>
+            </div>
+            <div class="right-foot">
+                <div>
+                    <a href="">About</a>
+                    <a href="">Accessibility</a>
+                    <a href="">Help Center</a>
+                    <a href="">Privacy</a>
+                </div>
+                <div>
+                    <a href="">Policy</a>
+                    <a href="">Advertising</a>
+                    <a href="">Get the App</a>
+                    <a href="">More</a>
+                </div>
+            </div>
+            <div style="padding-top: 15px; text-align: center;">
+                <i class="fa-brands fa-linkedin fa-xl" style="color: #005fff;"></i>
+                <span>Linkme &#169; 2022. All right reserve</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 
